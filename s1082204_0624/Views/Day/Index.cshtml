@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@using (Html.BeginForm("Index", "Day", FormMethod.Get))
+{
+   
+    <p>請輸入數字:@Html.TextBox("weight")</p>
+
+    if (@ViewBag.result != "")
+    {
+        <p>查詢結果 : @ViewBag.result</p>
+    }
+    <input type="submit" value="查詢" />
+}
